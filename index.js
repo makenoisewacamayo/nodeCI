@@ -13,6 +13,12 @@ require('./services/cache');
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI, { useMongoClient: true });
 
+mongoose.connection.on('error', () => {
+  console.log('Could not connect to the database. Exiting now...');
+  process.exit();
+});
+
+
 const app = express();
 
 app.use(bodyParser.json());
