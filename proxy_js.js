@@ -19,6 +19,7 @@ const allGreetings = new Proxy(moreGrettings, {
 
 console.log(allGreetings.french);
 console.log(allGreetings.spanish);
+console.log(allGreetings.german);
 console.log(allGreetings.french());
 console.log(allGreetings.english());
 console.log(allGreetings.german());
