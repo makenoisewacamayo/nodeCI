@@ -14,13 +14,11 @@ const gretings = new Greetings();
 const moreGrettings = new MoreGretings();
 
 const allGreetings = new Proxy(moreGrettings, {
-  get: function(target, property) {
-    // console.log(property);
-    return target[property] || gretings[property];
-  }
+  get: (target, property) => target[property] || gretings[property],
 });
 
 console.log(allGreetings.french);
+console.log(allGreetings.spanish);
 console.log(allGreetings.french());
 console.log(allGreetings.english());
-console.log(allGreetings.spanish);
+console.log(allGreetings.german());
