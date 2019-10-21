@@ -22,3 +22,4 @@ console.log(allGreetings.spanish);
 console.log(allGreetings.french());
 console.log(allGreetings.english());
 console.log(allGreetings.german());
+console.log(allGreetings.spanish());
