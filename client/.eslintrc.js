@@ -20,14 +20,12 @@ module.exports = {
   plugins: [
     'react',
   ],
-  rules: [
-    {
-      loader: 'eslint-loader',
-      test: /\.js$/,
-      exclude: /node_modules/,
-      options: {
-        formatter: require('eslint/lib/cli-engine/formatters/stylish')
-      },
-    },
-  ],
+  rules: {
+    "jsx-a11y/href-no-hash": [
+      "off"
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "warn", { "aspects": ["invalidHref"] }
+    ]
+  },
 };
